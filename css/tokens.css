@@ -1,0 +1,154 @@
+/* ===== Tokens de design do VJ (Vida de Jesus): papel e tinta, índigo da noite de Belém e ouro da estrela ===== */
+:root {
+  --font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: "Inter", ui-rounded, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* papel e tinta (tema dia) */
+  --paper: #fff8ea;
+  --paper-2: #f8edd5;
+  --paper-3: #eedfbd;
+  --card: #fffdf6;
+  --ink: #1c2238;
+  --ink-2: #454d68;
+  --ink-3: #58607d;
+  --line: rgba(28, 34, 56, 0.14);
+  --line-2: rgba(28, 34, 56, 0.08);
+
+  /* paleta do livro: noite índigo, ouro, oliveira, alvorada */
+  --forest: #22376b;      /* (nome histórico) = índigo da marca */
+  --forest-2: #34509a;
+  --leaf: #3e8a5f;
+  --sage: #8db596;
+  --mint: #d6e4f6;
+  --sun: #f4b73f;
+  --sun-2: #ffd27a;
+  --peach: #f8a77b;
+  --terra: #c9633c;
+  --berry: #8e3b5e;
+  --sky: #d3e3f7;
+  --night: #0d1530;
+
+  /* cores das ilustrações (símbolos do sprite) */
+  --c-white: #fffdf7;
+  --c-cream: #fff2d2;
+  --c-linen: #f4ecda;
+  --c-linen-d: #dccfb2;
+  --c-wool: #fffaf0;
+  --c-wool-d: #e4d8bf;
+  --c-star: #ffd24a;
+  --c-star-d: #f2a91c;
+  --c-gold: #f2b53a;
+  --c-gold-d: #c98b12;
+  --c-flame: #ffa233;
+  --c-flame-d: #ff6f1c;
+  --c-clay: #c47a4a;
+  --c-clay-d: #9a5530;
+  --c-wood: #8c5b3a;
+  --c-wood-d: #5e3b26;
+  --c-wood-l: #b98657;
+  --c-stone: #bdb5a4;
+  --c-stone-d: #8f8878;
+  --c-sand: #ecd194;
+  --c-sand-d: #cfa55c;
+  --c-night: #243273;
+  --c-night-d: #141c47;
+  --c-indigo: #34509a;
+  --c-sea: #4f90c8;
+  --c-water: #7cc4e0;
+  --c-water-d: #4a9bc4;
+  --c-leaf: #4a9a62;
+  --c-leaf-d: #2f7448;
+  --c-olive: #7e8f3c;
+  --c-olive-d: #566527;
+  --c-wheat: #e5b350;
+  --c-wheat-d: #c48f2a;
+  --c-bread: #d99a4e;
+  --c-bread-d: #b87630;
+  --c-crust: #a85f26;
+  --c-wine: #8e2f4a;
+  --c-wine-d: #6a1f36;
+  --c-rose: #f08a6a;
+  --c-purple: #6a4fa3;
+  --c-purple-d: #4a3578;
+  --c-grape: #6d3f8d;
+  --c-grape-d: #4f2a69;
+  --c-apple: #d9453b;
+  --c-gray: #8a94a6;
+  --c-gray-d: #5f6a80;
+  --c-fur: #8d8578;
+  --c-fur-d: #6a6357;
+  --c-skin: #e9be96;
+  --c-skin-d: #cd9a70;
+  --c-forest: #22376b;
+  --c-forest-2: #34509a;
+  --c-sky: #d3e3f7;
+
+  /* escala */
+  --gutter: 20px;
+  --r-s: 10px;
+  --r-m: 16px;
+  --r-l: 26px;
+  --r-xl: 38px;
+  --shadow-1: 0 1px 2px rgba(20, 28, 60, 0.08), 0 8px 24px rgba(20, 28, 60, 0.08);
+  --shadow-2: 0 14px 50px rgba(20, 28, 60, 0.2);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* tipografia fluida */
+  --fs-hero: clamp(2.55rem, 9vw, 5.4rem);
+  --fs-h2: clamp(1.9rem, 5.4vw, 3.1rem);
+  --fs-h3: clamp(1.25rem, 3.2vw, 1.6rem);
+  --fs-lead: clamp(1.1rem, 2.6vw, 1.38rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9rem;
+  --fs-tiny: 0.78rem;
+
+  --header-h: 56px;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 32px;
+    --header-h: 64px;
+  }
+}
+
+/* tema noite: ativado pelo botão ou pelo sistema (se o usuário não escolheu) */
+:root[data-theme="night"] {
+  color-scheme: dark;
+  --paper: #0d1530;
+  --paper-2: #121b3e;
+  --paper-3: #19244f;
+  --card: #141e44;
+  --ink: #f6eedb;
+  --ink-2: #d2cbbb;
+  --ink-3: #9ea7c0;
+  --line: rgba(246, 238, 219, 0.18);
+  --line-2: rgba(246, 238, 219, 0.1);
+  --forest: #f4c25a;
+  --forest-2: #ffd47a;
+  --mint: #1b2a5c;
+  --sky: #16275a;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 14px 50px rgba(0, 0, 0, 0.55);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="day"]) {
+    color-scheme: dark;
+    --paper: #0d1530;
+    --paper-2: #121b3e;
+    --paper-3: #19244f;
+    --card: #141e44;
+    --ink: #f6eedb;
+    --ink-2: #d2cbbb;
+    --ink-3: #9ea7c0;
+    --line: rgba(246, 238, 219, 0.18);
+    --line-2: rgba(246, 238, 219, 0.1);
+    --forest: #f4c25a;
+    --forest-2: #ffd47a;
+    --mint: #1b2a5c;
+    --sky: #16275a;
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+    --shadow-2: 0 14px 50px rgba(0, 0, 0, 0.55);
+  }
+}

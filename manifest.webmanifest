@@ -1,0 +1,16 @@
+{
+  "name": "VJ — Vida de Jesus",
+  "short_name": "VJ",
+  "description": "Ele veio para ficar perto. Uma jornada em cartões pela vida de Jesus, baseada no livro Vida de Jesus.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff8ea",
+  "theme_color": "#22376b",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

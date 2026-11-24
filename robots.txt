@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://paulorltenorio.github.io/VJ/sitemap.xml

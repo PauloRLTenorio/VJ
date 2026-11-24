@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>VJ — Vida de Jesus · uma jornada em cartões</title>
+<meta name="description" content="Ele veio para ficar perto. Uma jornada interativa, em cartões curtos, pela vida de Jesus: de uma noite em Belém ao lar que Ele prepara. Baseada no livro Vida de Jesus.">
+<meta name="theme-color" content="#fff8ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1530" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://paulorltenorio.github.io/VJ/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="VJ">
+<meta property="og:title" content="VJ — Ele veio para ficar perto">
+<meta property="og:description" content="Uma jornada interativa, em cartões curtos, pela vida de Jesus: de uma noite em Belém ao lar que Ele prepara.">
+<meta property="og:url" content="https://paulorltenorio.github.io/VJ/">
+<meta property="og:image" content="https://paulorltenorio.github.io/VJ/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"VJ — Vida de Jesus","alternateName":"VJ","url":"https://paulorltenorio.github.io/VJ/","inLanguage":"pt-BR","description":"Uma jornada interativa, em cartões curtos, pela vida de Jesus, baseada no livro Vida de Jesus."}</script>
+<link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/story.css">
+<link rel="stylesheet" href="css/widgets.css">
+<script>
+  // aplica o tema salvo antes da pintura, para não piscar
+  try { var t = localStorage.getItem('vj.tema'); if (t === 'day' || t === 'night') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#jornada">Pular para a jornada</a>
+
+<header class="hdr" id="hdr">
+  <a class="brand" href="#/" aria-label="VJ — início">
+    <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#22376b"/><path d="M20 6l2.6 11.4L34 20l-11.4 2.6L20 34l-2.6-11.4L6 20l11.4-2.6z" fill="#ffd24a"/><circle cx="20" cy="20" r="3.4" fill="#fff8ea"/></svg>
+    <span class="brand__txt">VJ</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Seções">
+    <a href="#jornada">Jornada</a>
+    <a href="#brinque">Brinque</a>
+    <a href="#livro">O livro</a>
+    <a href="#autor">Quem fez</a>
+  </nav>
+  <div class="hdr__tools">
+    <button class="icon-btn" id="btnContinuar" type="button" hidden>Continuar</button>
+    <button class="icon-btn icon-btn--round" id="btnTema" type="button" aria-label="Alternar entre tema claro e escuro" title="Dia / noite">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><g class="i-sun" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></g><path class="i-moon" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- HERO -->
+  <section class="hero" id="topo" aria-labelledby="hero-titulo">
+    <div class="hero__sky" aria-hidden="true">
+      <div class="hero__sun"></div>
+      <svg class="hero__cloud hero__cloud--a" viewBox="0 0 100 100"><use href="#s-cloud"/></svg>
+      <svg class="hero__cloud hero__cloud--b" viewBox="0 0 100 100"><use href="#s-cloud"/></svg>
+      <svg class="hero__hills" viewBox="0 0 1200 300" preserveAspectRatio="none">
+        <path d="M0 150C150 80 300 70 460 120s330 70 500 10 190-20 240 0V300H0z" fill="url(#g-hill-1)"/>
+        <path d="M0 210C140 150 290 150 430 190s300 40 470-10 220-20 300 10V300H0z" fill="url(#g-hill-2)"/>
+        <path d="M0 262C180 230 330 236 520 262s380 20 680-14V300H0z" fill="url(#g-hill-3)"/>
+      </svg>
+    </div>
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">VJ · Vida de Jesus</p>
+        <h1 id="hero-titulo">Ele veio para ficar perto.</h1>
+        <p class="lead">Da noite em Belém ao túmulo vazio e à promessa de que Ele volta: a vida de Jesus em cartões curtos, no seu ritmo. Toque, escute, brinque, e depois siga para o livro.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" id="btnComecar" href="#/h/noite-em-belem">Começar a jornada</a>
+          <a class="btn btn--ghost" href="#jornada">Escolher uma parada</a>
+        </div>
+        <p class="hero__quick"><a href="#/h/em-60-segundos">Sem tempo? Veja o livro em 60 segundos →</a></p>
+        <p class="hero__meta"><span>17 paradas de 1 a 2 min</span><span>toque, arraste e brinque</span><span>feito para o celular</span></p>
+      </div>
+      <div class="hero__scene" id="heroScene" role="group" aria-label="O caminho, da noite de Belém ao túmulo vazio, com uma estrela, um farol, um ramo de palmeira, um túmulo, uma ovelha e um cálice. Toque nos objetos para abrir uma história."></div>
+    </div>
+    <p class="hero__hint" id="heroHint">Toque nos objetos do caminho</p>
+  </section>
+
+  <!-- TRÊS IDEIAS -->
+  <section class="ideias" id="ideia" aria-labelledby="ideias-titulo">
+    <div class="container">
+      <p class="eyebrow">O livro em três ideias</p>
+      <h2 id="ideias-titulo" class="h2">Três ideias para começar</h2>
+      <ol class="ideias__lista">
+        <li class="ideia">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#s-manger"/></svg>
+          <h3>Ele veio perto.</h3>
+          <p>Numa manjedoura, numa aldeia simples, entre os pobres. Jesus escolheu a simplicidade para mostrar que entende cada dificuldade.</p>
+        </li>
+        <li class="ideia">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#s-basin"/></svg>
+          <h3>Ele serve e dá a vida.</h3>
+          <p>Lavou os pés dos amigos, orou no jardim e perdoou na cruz. Para o livro, é um amor que vai até o fim.</p>
+        </li>
+        <li class="ideia">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#s-tomb"/></svg>
+          <h3>Ele vive e vai voltar.</h3>
+          <p>O túmulo ficou vazio. Jesus promete estar conosco todos os dias e preparar um lar sem lágrimas.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- JORNADA -->
+  <section class="jornada" id="jornada" aria-labelledby="jornada-titulo">
+    <div class="container">
+      <p class="eyebrow">A jornada</p>
+      <h2 id="jornada-titulo" class="h2">Dezessete paradas. Um só caminho.</h2>
+      <p class="sec-lead">Cada parada leva de 1 a 2 minutos. Toque para avançar, deslize ou use as setas do teclado. Siga a ordem ou escolha o que mais chama a atenção.</p>
+      <a class="quick" href="#/h/em-60-segundos">
+        <span class="quick__ic" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#s-clock"/></svg></span>
+        <span class="quick__txt"><b>Sem tempo? O livro em 60 segundos</b><span>Seis cartões com o coração da mensagem.</span></span>
+        <span class="quick__go" aria-hidden="true">Ver agora →</span>
+      </a>
+      <div class="tree" id="tree" aria-live="polite"></div>
+      <ol class="path" id="path"></ol>
+    </div>
+  </section>
+
+  <!-- CADERNO (aparece só quando há anotações) -->
+  <section class="caderno" id="caderno" aria-labelledby="caderno-titulo" hidden>
+    <div class="container">
+      <p class="eyebrow">Só seu</p>
+      <h2 id="caderno-titulo" class="h2">Meu caderno</h2>
+      <p class="sec-lead">As reflexões que você escreveu ficam guardadas apenas neste aparelho. Ninguém mais vê.</p>
+      <div class="caderno__list" id="cadernoLista"></div>
+      <div class="caderno__act"><button type="button" class="btn btn--ghost" id="cadernoCopiar">Copiar tudo</button><button type="button" class="btn btn--ghost" id="cadernoLimpar">Apagar o caderno</button></div>
+    </div>
+  </section>
+
+  <!-- BRINQUE -->
+  <section class="brinque" id="brinque" aria-labelledby="brinque-titulo">
+    <div class="container">
+      <p class="eyebrow">Brinque com as cenas</p>
+      <h2 id="brinque-titulo" class="h2">Histórias que a gente entende com a mão</h2>
+      <p class="sec-lead">Pequenas interações para viver, em poucos segundos, o que o livro conta. Cada uma abre direto no cartão certo.</p>
+      <ul class="toys" id="toys"></ul>
+    </div>
+  </section>
+
+  <!-- O LIVRO -->
+  <section class="livro" id="livro" aria-labelledby="livro-titulo">
+    <div class="container livro__grid">
+      <div class="livro__capa" aria-hidden="true">
+        <div class="capa">
+          <span class="capa__aut">Ellen G. White</span>
+          <span class="capa__tit">Vida de Jesus</span>
+          <svg viewBox="0 0 100 100"><use href="#s-star"/></svg>
+        </div>
+      </div>
+      <div class="livro__txt">
+        <p class="eyebrow">Sobre o livro</p>
+        <h2 id="livro-titulo" class="h2">Para quem quiser ir à fonte</h2>
+        <p><strong>Vida de Jesus</strong>, de Ellen G. White (1827–1915), conta em linguagem simples a vida de Cristo, do nascimento em Belém à promessa da Sua volta. São 23 capítulos, reunidos em três seções: “Cristo vem ao mundo”, “Jesus ao lado das pessoas” e “A paixão de Cristo”.</p>
+        <p>Este site <strong>não reproduz o livro</strong>. Ele conta, em palavras próprias, as cenas e as ideias de cada capítulo, para despertar a curiosidade e levar você ao texto completo, onde estão o contexto e os detalhes.</p>
+        <p>Onde você vir <strong>VJ 10.6</strong>, leia “página 10, parágrafo 6 do livro impresso”: o link abre o trecho exato no site oficial, para você conferir.</p>
+        <p class="livro__links">
+          <a class="btn btn--sun" href="https://m.egwwritings.org/pt/book/1727" target="_blank" rel="noopener">Ler o livro completo no site</a>
+        </p>
+        <aside class="aviso" aria-labelledby="aviso-t">
+          <h3 id="aviso-t">Um aviso importante</h3>
+          <p>Este é um conteúdo devocional, baseado num livro escrito há mais de um século. Projeto independente e sem fins lucrativos. Não é um site oficial do Ellen G. White Estate nem de qualquer instituição.</p>
+          <p>Por reverência, nenhuma ilustração mostra o rosto de Jesus: usamos símbolos, objetos e paisagens.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEVE COM VOCÊ: QR Code do site (conversa, grupo, palestra) -->
+  <section class="leve" id="leve" aria-labelledby="leve-titulo">
+    <div class="container leve__grid">
+      <img class="leve__img" src="assets/qr.svg" width="240" height="240" alt="QR Code que abre o VJ em paulorltenorio.github.io/VJ" loading="lazy" decoding="async">
+      <div class="leve__txt">
+        <p class="eyebrow">Leve com você</p>
+        <h2 id="leve-titulo" class="h2">Aponte a câmera e leve o VJ</h2>
+        <p class="sec-lead">Mostre este código numa conversa, num grupo ou na tela de uma palestra: quem apontar a câmera do celular abre o site na hora.</p>
+        <p class="leve__act">
+          <button type="button" class="btn btn--primary" id="leveTela" hidden>Mostrar em tela cheia</button>
+          <button type="button" class="btn btn--ghost" id="leveCopiar" hidden>Copiar o link</button>
+          <a class="btn btn--ghost" href="assets/qr.png" download="vj-qrcode.png">Baixar o QR Code</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM FEZ ESTE SITE -->
+  <section class="autor" id="autor" aria-labelledby="autor-titulo">
+    <div class="container autor__grid">
+      <svg class="autor__marca" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#22376b"/><path d="M20 6l2.6 11.4L34 20l-11.4 2.6L20 34l-2.6-11.4L6 20l11.4-2.6z" fill="#ffd24a"/><circle cx="20" cy="20" r="3.4" fill="#fff8ea"/></svg>
+      <div class="autor__txt">
+        <p class="eyebrow">Sobre o desenvolvedor</p>
+        <h2 id="autor-titulo" class="h2">Quem fez este site</h2>
+        <p class="autor__abre">Este é um projeto pessoal, feito com fé, tecnologia e vontade de aprender. Prazer, eu sou o Paulo.</p>
+
+        <h3>Quem sou</h3>
+        <p>Sou brasileiro e moro em Alagoas, na região de Maceió. Sou formado em Matemática e construí minha carreira na área de tecnologia, com desenvolvimento web e automação em Python.</p>
+
+        <h3>Minha fé e por que criei este site</h3>
+        <p>Sou cristão adventista do sétimo dia, e a fé ocupa o centro da minha vida. Gosto de estudar a Bíblia, entender o contexto das Escrituras e fundamentar minhas convicções na Palavra de Deus. Valorizo também os escritos de Ellen G. White. Este site une duas coisas que são importantes para mim: fé e tecnologia. Nele, eu conto, com palavras próprias e em cartões curtos e interativos, as cenas e ideias centrais do livro <em>Vida de Jesus</em>, para despertar a curiosidade e levar você ao texto completo.</p>
+
+        <h3>Como penso e aprendo</h3>
+        <p>Sou curioso e gosto de entender como as coisas funcionam, sem me contentar com respostas superficiais. Comparo informações e procuro fundamentos antes de formar opinião. Prefiro uma resposta verdadeira, mesmo quando contraria o que eu esperava, a uma resposta agradável sem base. Quero não apenas receber respostas, mas aprender a pensar sobre os assuntos. Para mim, conhecimento precisa fazer sentido, questionar faz parte do aprendizado, e evoluir exige reconhecer erros, rever ideias e continuar tentando. Este site reflete esse jeito de aprender: organizar o conteúdo para compreendê-lo melhor, e não apenas acumular informação.</p>
+
+        <h3>Família e valores</h3>
+        <p>Valorizo a verdade e o fundamento acima da conveniência, e uma fé que se apoia na Palavra de Deus e no estudo. Procuro ter um olhar atento às necessidades de quem amo e contribuir com soluções, porque, para mim, cuidar também é buscar conhecimento e fazer perguntas. E quero crescer sempre: no trabalho, no estudo e na fé.</p>
+
+        <h3>Tecnologia a serviço do estudo</h3>
+        <p>Gosto de usar a tecnologia e a inteligência artificial para resolver problemas reais e servir pessoas. Nos meus projetos pessoais, cuido da ideia, da arquitetura e dos testes, e uso ferramentas de IA como apoio ao desenvolvimento. Este site foi feito assim: eu conduzi o projeto, tomei as decisões e testei, e o código e os textos dos cartões foram escritos com a ajuda de ferramentas de IA. Estou sempre aprendendo, melhorando e evoluindo este projeto aos poucos.</p>
+
+        <p class="autor__nota">Projeto pessoal e independente, sem fins lucrativos. Não fala em nome de nenhuma instituição.</p>
+
+        <p class="autor__fecho">Se algo aqui te ajudar a estudar com mais clareza, fico feliz. Quer conversar, tirar uma dúvida, sugerir ou corrigir alguma coisa? Me chame no Instagram.</p>
+        <p class="autor__acoes"><a class="btn btn--primary" href="https://www.instagram.com/paulotenorio731/" target="_blank" rel="noopener noreferrer">Falar comigo no Instagram</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="qrfull" id="qrfull" aria-labelledby="qrfull-t">
+  <div class="qrfull__in">
+    <img class="qrfull__img" src="assets/qr.svg" width="640" height="640" alt="QR Code que abre o VJ">
+    <div class="qrfull__side">
+      <p class="qrfull__t" id="qrfull-t">Aponte a câmera do celular</p>
+      <p class="qrfull__u">paulorltenorio.github.io/VJ</p>
+      <button type="button" class="btn btn--primary" data-fechar>Fechar</button>
+    </div>
+  </div>
+</dialog>
+
+<footer class="ftr">
+  <div class="container ftr__in">
+    <p class="ftr__brand">VJ</p>
+    <p class="ftr__txt">Uma jornada em cartões inspirada no livro <em>Vida de Jesus</em>. Os textos do site são em palavras próprias; os trechos do livro sempre indicam a página e o parágrafo e levam ao texto completo.</p>
+    <p class="ftr__txt">Criado pelo Paulo, formado em Matemática, profissional de TI e cristão adventista, com apoio de ferramentas de IA. Projeto pessoal e independente.</p>
+    <p class="ftr__links">
+      <a href="#topo">Voltar ao topo</a>
+      <a href="#leve">QR Code</a>
+      <a href="#autor">Quem fez</a>
+      <a href="https://www.instagram.com/paulotenorio731/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <button type="button" id="btnCompartilhar" class="linklike">Compartilhar</button>
+    </p>
+  </div>
+</footer>
+
+<div id="viewer" class="sv" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript>
+  <section style="max-width:42rem;margin:0 auto;padding:24px;font:17px/1.55 system-ui,sans-serif">
+    <p><strong>Este site é interativo e precisa de JavaScript para mostrar as histórias.</strong> Ative o JavaScript ou leia o livro completo, de graça, <a href="https://m.egwwritings.org/pt/book/1727">no site oficial</a>.</p>
+    <h2>As dezessete paradas</h2>
+    <ol>
+      <li>Uma noite em Belém — sem lugar na hospedaria, nasceu o Rei; a notícia chegou primeiro a quem orava.</li>
+      <li>A estrela dos sábios — uma luz no céu, uma pergunta em Jerusalém e presentes para um Menino.</li>
+      <li>O menino de Nazaré — mãos de carpinteiro, coração de servo e as manhãs a sós com Deus.</li>
+      <li>Batismo e deserto — três tentações e uma resposta só.</li>
+      <li>Os primeiros passos — um chamado, uma festa e um poço.</li>
+      <li>A montanha e a estrada — oito bem-aventuranças, uma luz no escuro e o bom samaritano.</li>
+      <li>O dia de descanso — parar, olhar e fazer o bem.</li>
+      <li>O bom Pastor — conhece cada ovelha pelo nome e vai atrás da que se perdeu.</li>
+      <li>Hosana! — uma multidão canta, as crianças lideram e as pedras clamariam.</li>
+      <li>A última ceia — uma toalha, uma bacia e o pão partido.</li>
+      <li>Getsêmani — “Seja feita a Tua vontade”.</li>
+      <li>Preso e julgado — calmo diante dos que O acusavam.</li>
+      <li>A cruz — “Pai, perdoa-lhes”.</li>
+      <li>Ressuscitou! — a noite mais escura antes do amanhecer.</li>
+      <li>Paz seja convosco — Emaús, o pão partido e a promessa “Estou convosco”.</li>
+      <li>O lar que Ele prepara — Ele voltará e prepara um lugar sem lágrimas.</li>
+      <li>Seu próximo passo — sete gestos pequenos e um convite.</li>
+    </ol>
+  </section>
+</noscript>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
